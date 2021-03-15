@@ -1,86 +1,132 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="sv">
 <head>
-  <meta charset="utf-8">
-  <title>Nils Personal Site</title>
+    <meta charset="UTF-8">
+    <title>Nälden</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js.js" defer="true"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100&family=Sacramento&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <table cellspacing="10">
-    <tr>
-      <td> <img src="https://pbs.twimg.com/profile_images/722100470295183362/WyAx3r3O_400x400.jpg" alt="Bild På Nils"></td>
-      <td>
-        <h1>Nils Bergström</h1>
-        <p>
-          <em>Founder and CTO of <strong><a href="https://www.appbrewery.co/">The app Brewery</a></strong></em>
-        </p>
-        <p>
-          I am an iOS and Web Developer. I love coffee and brew my own beers.
-        </p>
-      </td>
-    </tr>
-  </table>
+    <nav class="navbar">
+        <div class="brand-title">Bygdernas bygd</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
 
-  <hr>
-  <h3>Books and Teaching</h3>
-  <ul>
-    <li>The Complete iOS APP develepment bootcamp</li>
-    <li>The complete web develepment Bootcamp</li>
-  </ul>
-<hr>
-  <h3>Work Experience</h3>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li>
+                    <a href="index.html">Hem</a>
+                </li>
+                <li>
+                    <a href="topplista.html">Topplista</a>
+                </li>
 
-  <table cellspacing="10">
-    <thead>
-      <tr>
-        <th>Dates</th>
-        <th>Work</th>
-      </tr>
-    </thead>
-    <tbody>
+                
+            </ul>
+        </div>
+    </nav>
+    <header class="header">
 
-    </tbody>
-    <tfoot>
+        <h1>Nälden</h1>
+        <h2>Hemsidan om en by som hade <u>allt</u></h2>
+    </header>
 
-    </tfoot>
-    <tr>
-      <td>2010-2013</td>
-      <td>Lead Developer at Tempo App</td>
-    </tr>
-    <tr>
-      <td>2010</td>
-      <td>Researcher at the Institute of Cognitive Neuroscience</td>
-    </tr>
-    <tr>
-      <td>2013</td>
-      <td>Lagerslav på Pelle och Lisa</td>
-    </tr>
-  </table>
-  <table>
-<hr>
-    <h3>Skills</h3>
-    <table cellspacing="10">
-      <tr>
-        <td>iOS Development</td>
-        <td>🥚🥚🥚🥚🥚</td>
-      </tr>
-      <tr>
-        <td>web Development</td>
-        <td>🥚🥚🥚🥚</td>
-      </tr>
-      <tr>
-        <td>Photography</td>
-        <td>🥚🥚🥚🥚</td>
-      </tr>
-    </table>
+    <div class="middle-container">
 
-    <hr>
+        <h2>Välkommen!</h2>
 
-    <a href="hobbies.html">My Hobbies</a>
+        <h3>Detta är en hemsida dedikerad till min hemby - NÄLDEN! </h3>
 
-    <br>
-    <a href="contact.html">My contact information</a>
-</body>
+        <p>Här kan du få ta del av intressant Näldenfakta från en "Visste du att?"-slumpgenerator, njuta av de vackra bilderna och <b>psst</b>! Fyll i din mailadress nedan för att vara säker på att aldrig missa nyheter om kommande händelser i byn! </p>
+        <hr>
 
-</html>
+    </div>
+    <div class="section group">
+        <div class="column span_1_of_3">
+            <p> Tryck på knappen nedan för att slumpa fram intressant fakta om byn som har allt!</p>
+            <div id="Factdisplay"></div>
+
+            <form>
+
+                <input class="btn" type="button" value="Visste du att?" onclick="funfact()" />
+            </form>
+            <p id="factdisplay"></p>
+        </div>
+        <div class="column span_1_of_3">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="Bilder/Vasterang2.jpeg" style="width:100%" alt="Västeräng">
+                    <div class="text">Bild på en av Näldens finaste ängar!</div>
+                </div>
+
+                <div class="mySlides">
+                    <img src="Bilder/Flygfoto2.jpeg" style="width:100%" alt="Flygfoto över Nälden">
+                    <div class="text">Flygfoto över Nälden. Modell: äldre.</div>
+                </div>
+
+                <div class="mySlides">
+                    <img src="Bilder/Dansgalan2.jpeg" style="width:100%" alt="Bild på 3 dansentusiaster">
+                    <div class="text">Undertecknad på Näldens Dansgala 2018</div>
+                </div>
+
+                <div class="mySlides">
+                    <img src="Bilder/vinterbild.jpg" style="width:100%" alt="Bild på Faxån">
+                    <div class="text">Genom Nälden rinner den vackra Faxån</div>
+                </div>
+
+                <div class="mySlides">
+                    <img src="Bilder/Skatten.jpeg" style="width:100%" alt="Bild på Nälden med regnbåge">
+                    <div class="text">Vid regnbågens slut finns... NÄLDEN</div>
+                </div>
+
+
+            </div>
+            <br>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="column span_1_of_3">
+       <div class="wrapper">
+  <h2>Kontakta oss!</h2>
+  <div id="error_message">
+     
+  </div>
+  <form action="" id="myform" onsubmit = "return validate();">
+    <div class="input_field">
+        <input type="text" placeholder="namn" id="name">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Ämne" id="subject">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Telefonnummer" id="phone">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Email" id="email">
+    </div>
+    <div class="input_field">
+        <textarea placeholder="meddelande" id="message"></textarea>
+    </div>
+    <div>
+        <input type="submit" class="btn">
+    </div>
+  </form>
+</div>
+
+
+
+        </div>
+        </div>
+        <div>
+       <footer class="footer">
+        
+       </footer>
+       </div>
+        
+</body></html>
